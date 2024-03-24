@@ -3,7 +3,7 @@ package sistemadeemprestimobiblioteca;
 import java.util.Scanner;
 
 
-abstract class Item {
+public abstract class Item {
     private static int lastId = 0; // variável de classe para rastrear o último ID usado
     private int id;
     private String titulo;
@@ -56,7 +56,7 @@ abstract class Item {
     }
     
     public String toString() {
-      return "ID: "+getId()+" | "+
+      return "ID Item: "+getId()+" | "+
              "Titulo: "+getTitulo()+" | "+
              "Editora: "+getEditora();
  }

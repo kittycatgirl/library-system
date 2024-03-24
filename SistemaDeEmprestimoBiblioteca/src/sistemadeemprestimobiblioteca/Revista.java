@@ -79,10 +79,10 @@ class Revista extends Item {
     
     @Override
     public String toString() {
-      return "ID: "+getId()+" | "+
+      return "ID Revista: "+getId()+" | "+
              "Titulo: "+getTitulo()+" | "+
-             "Editora: "+getEditora()+
-             "Titulo: "+getDataPublicacao()+" | "+
-             "Titulo: "+getIssn();
+             "Editora: "+getEditora()+" | "+
+             "Data de Publicacao: "+getDataPublicacao()+" | "+
+             "ISSN: "+getIssn();
     }
 }

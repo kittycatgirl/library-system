@@ -3,8 +3,13 @@ package sistemadeemprestimobiblioteca;
 import java.util.ArrayList;
 import java.util.List;
 
-class Estoque {
+public class Estoque {
+    
     private List<Item> itens = new ArrayList<>();
+    
+    public List<Item> getItens() {
+        return itens;
+    }
 
     public boolean existeItem(Item novoItem) {
     int novoId = novoItem.getId();
@@ -21,6 +26,7 @@ class Estoque {
             System.out.println("ID ja encontrada no estoque, favor cadastrar item novamente com o ID certo.");
             return false;
         } else {
+            /*this.itens = new ArrayList<>();*/
             itens.add(item);
             return true;
         }

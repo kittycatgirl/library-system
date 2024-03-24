@@ -6,21 +6,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class Emprestimo {
+public class Emprestimo {
     private static int lastId = 0; // variável de classe para rastrear o último ID usado
     private int id;
     private String dataInicio;
     private String dataFim;
-    private List<Item> itens = new ArrayList<>();
-    private List<Usuario> usuarios = new ArrayList<>();
-    private List<Emprestimo> emprestimos = new ArrayList<>();
+    private Item item;
+    private Usuario usuario;
 
     public Emprestimo(String dataInicio, String dataFim) {
         this.id = ++lastId; // incrementa automaticamente o ID
         setDataInicio(dataInicio);
         setDataFim(dataFim);
     }
-
     
     public int getId() {
         return id;
@@ -94,41 +92,33 @@ class Emprestimo {
         }
     }
 
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public void renovarEmprestimo(String novaDataFim) {
+        setDataFim(novaDataFim);
+        System.out.println("Renovacao feita!");
+    }
     
-
-    public boolean emprestarItem(Usuario usuario, Item item, Estoque estoque) {
-        Scanner s = new Scanner(System.in);
-        int idItem = item.getId();
-        
-        System.out.println("Digite o ID do item que quer emprestar: ");
-        idItem = s.nextInt();
-        
-        System.out.println("Digite a data de início do emprestimo (formato dd/MM/yyyy):");
-        String dataInicio = s.next();
-
-        System.out.println("Digite a data de fim do emprestimo (formato dd/MM/yyyy):");
-        String dataFim = s.next();
-
-        Emprestimo emprestimo = new Emprestimo(dataInicio, dataFim);
-        
-        if (estoque.existeItem(item) == false) {
-        System.out.println("O item ja foi emprestado.");
-        return false;
-        } else {
-        estoque.excluirItem(item);
-        usuarios.add(usuario);
-        itens.add(item);
-        emprestimos.add(emprestimo);
-        System.out.println("O item emprestado com sucesso.");
-        return true;
-    } 
-    }
-
-    public void devolverItem() {
-    }
-
-    public boolean renovarEmprestimo() {
-        return true;
-    }
+    public String toString() {
+      return "ID: "+getId()+" | "+ 
+              getItem().toString()+" | "+ 
+              getUsuario().toString()+" | "+
+             "Entre: "+getDataInicio() + " - " + getDataFim();
+ }
+    
 }
 
