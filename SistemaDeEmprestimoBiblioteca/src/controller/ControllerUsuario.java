@@ -11,7 +11,7 @@ import sistemadeemprestimobiblioteca.Usuario;
  */
 public class ControllerUsuario {
     
-    private static List<Usuario> usuarios = new ArrayList<>();
+    private List<Usuario> usuarios = new ArrayList<>();
     
     /**
      * Retorna todos os usuários cadastrados
