@@ -78,6 +78,36 @@ class Revista extends Item {
     }
     
     @Override
+    public void alterarItem(int opcao) {
+        Scanner s = new Scanner(System.in);
+
+        switch(opcao) {
+            case 1:
+                System.out.println("Digite o novo titulo da revista:");
+                setTitulo(s.nextLine());
+                System.out.println("Título alterado com sucesso!");
+                break;
+            case 2:
+                System.out.println("Digite a nova editora da revista:");
+                setEditora(s.nextLine());
+                System.out.println("Editora alterada com sucesso!");
+                break;
+            case 3:
+                System.out.println("Digite a nova data de publicacao da revista:");
+                setDataPublicacao(s.nextLine());
+                System.out.println("Data de Publicacao alterada com sucesso!");
+                break;
+            case 4:
+                System.out.println("Digite o novo ISSN da revista:");
+                setIssn(s.nextInt());
+                System.out.println("ISSN alterado com sucesso!");
+                break;
+            default:
+                System.out.println("Opcao invalida!");
+        }
+    }
+    
+    @Override
     public String toString() {
       return "ID Revista: "+getId()+" | "+
              "Titulo: "+getTitulo()+" | "+

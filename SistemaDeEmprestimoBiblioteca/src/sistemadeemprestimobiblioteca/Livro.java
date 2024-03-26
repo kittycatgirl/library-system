@@ -106,6 +106,46 @@ class Livro extends Item {
     }
     
     @Override
+    public void alterarItem(int opcao) {
+        Scanner s = new Scanner(System.in);
+
+        switch(opcao) {
+            case 1:
+                System.out.println("Digite o novo titulo do livro:");
+                setTitulo(s.nextLine());
+                System.out.println("Título alterado com sucesso!");
+                break;
+            case 2:
+                System.out.println("Digite a nova editora do livro:");
+                setEditora(s.nextLine());
+                System.out.println("Editora alterada com sucesso!");
+                break;
+            case 3:
+                System.out.println("Digite o novo autor do livro:");
+                setAutor(s.nextLine());
+                System.out.println("Autor alterado com sucesso!");
+                break;
+            case 4:
+                System.out.println("Digite o novo genero do livro:");
+                setGenero(s.nextLine());
+                System.out.println("Genero alterado com sucesso!");
+                break;
+            case 5:
+                System.out.println("Digite o novo ano de publicacao do livro:");
+                setAnoPublicacao(s.nextInt());
+                System.out.println("Ano de publicacao alterado com sucesso!");
+                break;
+            case 6:
+                System.out.println("Digite o novo ISBN do livro:");
+                setIsbn(s.next());
+                System.out.println("ISBN alterada com sucesso!");
+                break;
+            default:
+                System.out.println("Opcao invalida!");
+        }
+    }
+    
+    @Override
     public String toString() {
       return "ID Livro: "+getId()+" | "+
              "Titulo: "+getTitulo()+" | "+

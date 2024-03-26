@@ -26,7 +26,6 @@ public class Estoque {
             System.out.println("ID ja encontrada no estoque, favor cadastrar item novamente com o ID certo.");
             return false;
         } else {
-            /*this.itens = new ArrayList<>();*/
             itens.add(item);
             return true;
         }

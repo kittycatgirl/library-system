@@ -14,7 +14,6 @@ public abstract class Item {
         setTitulo(titulo);
         setEditora(editora);
     }
-
    
     public int getId() {
         return this.id;
@@ -55,11 +54,30 @@ public abstract class Item {
         System.out.println("Item editado com sucesso!");
     }
     
+    public void alterarItem(int opcao) {
+        Scanner s = new Scanner(System.in);
+
+        switch(opcao) {
+            case 1:
+                System.out.println("Digite o novo titulo do item:");
+                setTitulo(s.nextLine());
+                System.out.println("Título alterado com sucesso!");
+                break;
+            case 2:
+                System.out.println("Digite a nova editora do item:");
+                setEditora(s.nextLine());
+                System.out.println("Editora alterada com sucesso!");
+                break;
+            default:
+                System.out.println("Opcao invalida!");
+        }
+    }
+    
     public String toString() {
       return "ID Item: "+getId()+" | "+
              "Titulo: "+getTitulo()+" | "+
              "Editora: "+getEditora();
- }
+    }
 
 
 }

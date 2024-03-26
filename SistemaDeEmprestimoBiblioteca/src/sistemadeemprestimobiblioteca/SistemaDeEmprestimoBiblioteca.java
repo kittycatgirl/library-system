@@ -111,25 +111,77 @@ public class SistemaDeEmprestimoBiblioteca {
     }
     
     public static void alterarInformacoesItem(Scanner scanner, Estoque estoque) {
-        System.out.println("\n===== Alterar Informações de Item =====");
-        System.out.print("Digite o ID do item que deseja alterar: ");
-        int itemId = scanner.nextInt();
-        scanner.nextLine();
+    System.out.println("\n===== Alterar Informações de Item =====");
+    System.out.print("Digite o ID do item que deseja alterar: ");
+    int itemId = scanner.nextInt();
+    scanner.nextLine();
 
-        Item item = null;
-        for (Item i : estoque.getItens()) {
-            if (i.getId() == itemId) {
-                item = i;
-                break;
-            }
-        }
-
-        if (item != null) {
-            item.alterarItem();
-        } else {
-            System.out.println("Item não encontrado!");
+    Item item = null;
+    for (Item i : estoque.getItens()) {
+        if (i.getId() == itemId) {
+            item = i;
+            break;
         }
     }
+
+    if (item != null) {
+        System.out.println("Deseja alterar todos os atributos do item ou apenas um?");
+        System.out.println("1. Todos os atributos");
+        System.out.println("2. Apenas um atributo");
+        System.out.print("Escolha uma opção: ");
+        int escolha = scanner.nextInt();
+        scanner.nextLine();
+
+        if (escolha == 1) {
+            if (item instanceof Livro) {
+                ((Livro) item).alterarItem();
+            } else if (item instanceof Revista) {
+                ((Revista) item).alterarItem();
+            } else {
+                item.alterarItem();
+            }
+        } else if (escolha == 2) {
+            if (item instanceof Livro) {
+                System.out.println("Qual atributo deseja alterar?");
+                System.out.println("1. Título");
+                System.out.println("2. Editora");
+                System.out.println("3. Autor");
+                System.out.println("4. Genero");
+                System.out.println("5. Ano Publicacao");
+                System.out.println("6. ISBN");
+                System.out.print("Escolha uma opção: ");
+                int opcao = scanner.nextInt();
+                scanner.nextLine();
+
+                ((Livro) item).alterarItem(opcao);
+            } else if (item instanceof Revista) {
+                System.out.println("Qual atributo deseja alterar?");
+                System.out.println("1. Título");
+                System.out.println("2. Editora");
+                System.out.println("3. Data Publicacao");
+                System.out.println("4. ISSN");
+                System.out.print("Escolha uma opção: ");
+                int opcao = scanner.nextInt();
+                scanner.nextLine();
+
+                ((Revista) item).alterarItem(opcao);
+            } else {
+                System.out.println("Qual atributo deseja alterar?");
+                System.out.println("1. Título");
+                System.out.println("2. Editora");
+                System.out.print("Escolha uma opção: ");
+                int opcao = scanner.nextInt();
+                scanner.nextLine();
+
+                item.alterarItem(opcao);
+            }
+        } else {
+            System.out.println("Opção inválida!");
+        }
+    } else {
+        System.out.println("Item não encontrado!");
+    }
+}
 
     public static void emprestarItem(Scanner scanner, Estoque estoque) {
         System.out.println("\n===== Empréstimo de Item =====");
