@@ -27,4 +27,4 @@ No geral, é um projeto bem simples, sem interface gráfica. Feito com o intuito
 
 
 ## Author
-- Linkedin - [Ana Paula Sousa da Silva]([https://www.linkedin.com/in/ana-paula-sousa-96a523214/])
+- Linkedin - [Ana Paula Sousa da Silva](https://www.linkedin.com/in/ana-paula-sousa-96a523214/)
