@@ -6,7 +6,7 @@ Projeto feito para a matéria de Programação II.
 
 - [Overview](#overview)
   - [Descrição](#Descrição)
-  - [Diagrama de Classes](#Diagrama de Classes)
+  - [Diagrama de Classes](#Diagrama-de-Classes)
 - [Author](#author)
 
 ## Overview
@@ -23,7 +23,7 @@ No geral, é um projeto bem simples, sem interface gráfica. Feito com o intuito
 
 ### Diagrama de Classes
 
-![]([https://github.com/kittycatgirl/library-system/blob/main/ModuloEmprestimoDiagrama.jpg])
+![](https://github.com/kittycatgirl/library-system/blob/main/ModuloEmprestimoDiagrama.jpg?raw=true)
 
 
 ## Author
