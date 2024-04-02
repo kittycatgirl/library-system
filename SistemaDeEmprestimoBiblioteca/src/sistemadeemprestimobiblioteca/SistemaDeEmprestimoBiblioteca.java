@@ -1,5 +1,10 @@
 package sistemadeemprestimobiblioteca;
 
+/**
+ *
+ * @author Ana Paula
+ */
+
 import controller.ControllerEmprestimo;
 import controller.ControllerUsuario;
 import java.util.Scanner;
@@ -125,9 +130,9 @@ public class SistemaDeEmprestimoBiblioteca {
     }
 
     if (item != null) {
-        System.out.println("Deseja alterar todos os atributos do item ou apenas um?");
-        System.out.println("1. Todos os atributos");
-        System.out.println("2. Apenas um atributo");
+        System.out.println("Deseja alterar todos as informacoes do item ou apenas um?");
+        System.out.println("1. Todas");
+        System.out.println("2. Apenas uma");
         System.out.print("Escolha uma opção: ");
         int escolha = scanner.nextInt();
         scanner.nextLine();
@@ -142,41 +147,41 @@ public class SistemaDeEmprestimoBiblioteca {
             }
         } else if (escolha == 2) {
             if (item instanceof Livro) {
-                System.out.println("Qual atributo deseja alterar?");
+                System.out.println("Qual informacao deseja alterar?");
                 System.out.println("1. Título");
                 System.out.println("2. Editora");
                 System.out.println("3. Autor");
                 System.out.println("4. Genero");
                 System.out.println("5. Ano Publicacao");
                 System.out.println("6. ISBN");
-                System.out.print("Escolha uma opção: ");
+                System.out.print("Escolha uma opcao: ");
                 int opcao = scanner.nextInt();
                 scanner.nextLine();
 
                 ((Livro) item).alterarItem(opcao);
             } else if (item instanceof Revista) {
-                System.out.println("Qual atributo deseja alterar?");
+                System.out.println("Qual informacao deseja alterar?");
                 System.out.println("1. Título");
                 System.out.println("2. Editora");
                 System.out.println("3. Data Publicacao");
                 System.out.println("4. ISSN");
-                System.out.print("Escolha uma opção: ");
+                System.out.print("Escolha uma opcao: ");
                 int opcao = scanner.nextInt();
                 scanner.nextLine();
 
                 ((Revista) item).alterarItem(opcao);
             } else {
-                System.out.println("Qual atributo deseja alterar?");
+                System.out.println("Qual informacao deseja alterar?");
                 System.out.println("1. Título");
                 System.out.println("2. Editora");
-                System.out.print("Escolha uma opção: ");
+                System.out.print("Escolha uma opcao: ");
                 int opcao = scanner.nextInt();
                 scanner.nextLine();
 
                 item.alterarItem(opcao);
             }
         } else {
-            System.out.println("Opção inválida!");
+            System.out.println("Opcao invalida!");
         }
     } else {
         System.out.println("Item não encontrado!");
@@ -184,7 +189,7 @@ public class SistemaDeEmprestimoBiblioteca {
 }
 
     public static void emprestarItem(Scanner scanner, Estoque estoque) {
-        System.out.println("\n===== Empréstimo de Item =====");
+        System.out.println("\n===== Emprestimo de Item =====");
         System.out.print("Digite o ID do usuário: ");
         int userId = scanner.nextInt();
         System.out.print("Digite o ID do item a ser emprestado: ");

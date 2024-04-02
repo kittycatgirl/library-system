@@ -1,5 +1,10 @@
 package sistemadeemprestimobiblioteca;
 
+/**
+ *
+ * @author Ana Paula
+ */
+
 import java.util.Scanner;
 
 

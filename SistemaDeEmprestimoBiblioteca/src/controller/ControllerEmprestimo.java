@@ -46,12 +46,16 @@ public class ControllerEmprestimo {
         System.out.println("Digite a data de fim do emprestimo (formato dd/MM/yyyy):");
         String dataFim = s.next();
         Emprestimo emprestimo = new Emprestimo(dataInicio, dataFim);
+        if (emprestimo.setDataFim(dataFim) == false) {
+            return false;
+        } else {
             emprestimo.setUsuario(usuario);
             emprestimo.setItem(item);
             emprestimos.add(emprestimo);
             System.out.println("O item foi emprestado com sucesso.");
             return true;
         } 
+    }
     }
 
     /**

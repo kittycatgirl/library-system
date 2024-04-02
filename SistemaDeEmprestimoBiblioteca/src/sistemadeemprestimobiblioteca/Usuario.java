@@ -1,7 +1,10 @@
 package sistemadeemprestimobiblioteca;
 
-import java.util.ArrayList;
-import java.util.List;
+/**
+ *
+ * @author Ana Paula
+ */
+
 
 public class Usuario {
     private static int lastId = 0; // variável de classe para rastrear o último ID usado

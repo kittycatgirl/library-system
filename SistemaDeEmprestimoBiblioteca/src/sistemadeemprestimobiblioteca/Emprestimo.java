@@ -1,5 +1,10 @@
 package sistemadeemprestimobiblioteca;
 
+/**
+ *
+ * @author Ana Paula
+ */
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -32,6 +37,7 @@ public class Emprestimo {
         return dataFim;
     }
 
+     
     public boolean setDataInicio(String dataInicio) {
         String[] partes = dataInicio.split("/"); // Divide a string em partes usando "/" como delimitador
         
