@@ -6,6 +6,7 @@ Projeto feito para a matéria de Programação II.
 
 - [Overview](#overview)
   - [Descrição](#Descrição)
+  - [Diagrama de Classes](#Diagrama de Classes)
 - [Author](#author)
 
 ## Overview
@@ -22,8 +23,8 @@ No geral, é um projeto bem simples, sem interface gráfica. Feito com o intuito
 
 ### Diagrama de Classes
 
-![]([./img-readme/Capturar.PNG](https://github.com/kittycatgirl/library-system/blob/main/ModuloEmprestimoDiagrama.jpg))
+![]([https://github.com/kittycatgirl/library-system/blob/main/ModuloEmprestimoDiagrama.jpg])
 
 
 ## Author
-- Linkedin - [Ana Paula Sousa da Silva]([https://www.linkedin.com/in/ruan-pereira-651523237/](https://www.linkedin.com/in/ana-paula-sousa-96a523214/))
+- Linkedin - [Ana Paula Sousa da Silva]([https://www.linkedin.com/in/ana-paula-sousa-96a523214/])
